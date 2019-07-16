@@ -39,9 +39,24 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'dotenv-rails'
 
+group :test do
+  gem 'factory_bot_rails'
+  gem 'rspec-sidekiq'
+  gem 'faker'
+  gem 'shoulda-matchers', '4.0.0.rc1'
+  gem 'rails-controller-testing'
+  gem 'simplecov', require: false, git: 'https://github.com/colszowka/simplecov.git'
+  gem "rspec_junit_formatter"
+end
+
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platform: :mri
+  gem 'rspec-rails', '~> 3.5'
+  gem 'database_cleaner'
+  gem 'timecop'
+  gem 'webmock'
 end
 
 group :development do
