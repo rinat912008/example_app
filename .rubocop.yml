@@ -1,0 +1,77 @@
+inherit_from: .rubocop_todo.yml
+
+require:
+  - rubocop-rspec
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  Exclude:
+    - vendor/**/*
+    - bin/*
+    - tmp/*
+    - db/schema.rb
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
+Style/NumericPredicate:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Exclude:
+    - app/helpers/active_admin/resources_helper.rb
+
+Metrics/BlockLength:
+  Max: 34
+  Exclude:
+    - spec/**/*
+    - config/routes.rb
+    - app/admin/**/*
+    - app/**/*.arb
+
+Metrics/LineLength:
+  Max: 120
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Bundler/OrderedGems:
+  Enabled: false
+
+RSpec/BeforeAfterAll:
+  Exclude:
+    - 'spec/spec_helper.rb'
+    - 'spec/rails_helper.rb'
+    - 'spec/support/**/*.rb'
+
+RSpec/ContextWording:
+  Enabled: false
+
+RSpec/NamedSubject:
+  Enabled: false
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/VerifiedDoubles:
+  Enabled: false
+
+RSpec/ExpectChange:
+  EnforcedStyle: block
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
