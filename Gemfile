@@ -40,10 +40,21 @@ gem 'dotenv-rails'
 
 gem 'devise', '>= 4.6.0'
 
+gem 'activerecord-import'
+
+gem 'dry-initializer'
+
+gem 'kaminari'
+
+gem 'tram-policy'
+gem 'tram-page'
+
+gem 'draper'
+
+gem 'oj'
+
 group :test do
-  gem 'factory_bot_rails'
   gem 'rspec-sidekiq'
-  gem 'faker'
   gem 'shoulda-matchers', '4.0.0.rc1'
   gem 'rails-controller-testing'
   gem 'simplecov', require: false, git: 'https://github.com/colszowka/simplecov.git'
@@ -52,6 +63,8 @@ end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'factory_bot_rails'
+  gem 'faker'
   gem 'byebug', platform: :mri
   gem 'rspec-rails', '~> 3.5'
   gem 'database_cleaner'
@@ -70,6 +83,8 @@ group :development do
   gem 'rubocop-performance'
   gem 'rubocop-rails'
   gem 'bundle-audit'
+  gem 'rails_best_practices'
+  gem 'rails-erd'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

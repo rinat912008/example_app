@@ -1,0 +1,13 @@
+defaults: &defaults
+  pagination:
+    page_number: 1
+    page_size: 10
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

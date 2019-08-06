@@ -33,3 +33,5 @@
 /coverage
 
 .idea/
+erd.pdf
+app/repositories/example_repository.rb
