@@ -1,0 +1,13 @@
+<h3>My posts</h3>
+<% @posts_vo.user_posts.each do |post| %>
+  <%= post.message %>
+  <br>
+<% end %>
+<h3>Latest posts</h3>
+<% @posts_vo.latest_posts.each do |post| %>
+  <%= post.message %>
+  user <%= post.user_email %> post at
+  <%= post.published_at %>
+  <br>
+<% end %>
+<%= paginate @posts_vo.latest_posts %>
